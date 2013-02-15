@@ -22,7 +22,7 @@
 \begin{frame}{Wer sind wir?}
 	Arnd Siebke
 	\begin{itemize}
-		\item Erzieher in einem Hort in Hamburg
+		\item Erzieher / Hort
 	\end{itemize}
 
 	Christopher Schwardt
@@ -34,6 +34,10 @@
 	\begin{itemize}
 		\item Systemadministrator
 	\end{itemize}
+	\vskip 1em
+%	\begin{center}
+		Kommunikation: kontakt@hamburg.freifunk.net
+%	\end{center}
 \end{frame}
 
 %===================|
@@ -43,15 +47,15 @@
 %2
 \begin{frame}{Was ist Freifunk?}
 	\begin{itemize}
-		\item Freifunk ist eine nicht kommerzielle Initiative zur Förderung freier Netzwerke
+		\item Freifunk ist eine nicht-kommerzielle Initiative zur Förderung freier Netzwerke
 
-		\item Freifunk Hamburg ist eine Projektgruppe des Chaos Computer Club Hamburg
-
-		\item Zusammenarbeit
-		%TODO vspace
+		\item Unterstützung
 		\begin{itemize}
 			\item Digitale Gesellschaft e.V.
+			\item Förderverein Freie Netzwerke e.V.
 		\end{itemize}
+
+		\item Freifunk Hamburg ist eine Projektgruppe des Chaos Computer Club Hansestadt Hamburg e.V.
 	\end{itemize}
 \end{frame}
 
@@ -108,133 +112,113 @@
 
 %11
 \begin{frame}{Mesh-Netzwerke}
-%	\begin{columns}[c]
-%		\begin{column}[c]{0.4\textwidth}
-		\begin{center}
-			\begin{tikzpicture}
-				\definecolor{outerCircleColour}{RGB}{220, 0, 103}
-				\definecolor{innerCircleColour}{RGB}{255, 203, 18}
-				\tikzstyle{vertex}=[circle, draw, color=outerCircleColour, ultra thick, minimum size=84pt]
-				\tikzstyle{place}=[circle, draw, color=innerCircleColour, fill=innerCircleColour, minimum size=6pt, inner sep=0pt]
+	\begin{center}
+		\begin{tikzpicture}
+			\definecolor{outerCircleColour}{RGB}{220, 0, 103}
+			\definecolor{innerCircleColour}{RGB}{255, 203, 18}
+			\tikzstyle{vertex}=[circle, draw, color=outerCircleColour, ultra thick, minimum size=84pt]
+			\tikzstyle{place}=[circle, draw, color=innerCircleColour, fill=innerCircleColour, minimum size=6pt, inner sep=0pt]
 
-				\node [vertex] (a) {};
-				\node [vertex, xshift=68pt, yshift=24pt] (b) {};
-				\node [vertex, xshift=112pt, yshift=-20pt] (c) {};
+			\node [vertex] (a) {};
+			\node [vertex, xshift=68pt, yshift=24pt] (b) {};
+			\node [vertex, xshift=112pt, yshift=-20pt] (c) {};
 
-				\node [place, label=above:$A$] (A) {};
-				\node [place, xshift=68pt, yshift=24pt, label=above:$B$] (B) {};
-				\node [place, xshift=112pt, yshift=-20pt, label=right:$C$] (C) {};
+			\node [place, label=above:$A$] (A) {};
+			\node [place, xshift=68pt, yshift=24pt, label=above:$B$] (B) {};
+			\node [place, xshift=112pt, yshift=-20pt, label=right:$C$] (C) {};
 
-				\path[-, thick, color=gray]
-				(A) edge (B)
-				(B) edge (C);
-			\end{tikzpicture}
-		\end{center}
-%		\end{column}
-%		\begin{column}[c]{0.5\textwidth}
-%			\begin{itemize}
-%				\item $A$ kann $B$ erreichen und $B$ erreicht $C$
-%				\item Über ``ad-hoc routing''-Protokolle tauschen die Geräte selbstständig Informationen darüber aus, wer wen erreichen kann
-%				\item $A$ erreicht automatisch $C$, wenn\\
-%				$A$ Kontakt zu $B$ und\\
-%				$B$ Kontakt zu $C$ hat
-%			\end{itemize}
-%		\end{column}
-%	\end{columns}
+			\path[-, thick, color=gray]
+			(A) edge (B)
+			(B) edge (C);
+		\end{tikzpicture}
+	\end{center}
 \end{frame}
 
-%12
 \begin{frame}{Mesh-Netzwerke}
-%	\begin{columns}[c]
-%		\begin{column}[c]{.4\textwidth}
-		\begin{center}
-			\begin{tikzpicture}
+	\begin{center}
+		\begin{tikzpicture}
 \definecolor{outerCircleColour}{RGB}{220, 0, 103}
-				\definecolor{innerCircleColour}{RGB}{255, 203, 18}
-				\tikzstyle{vertex}=[circle, draw, color=outerCircleColour, ultra thick, minimum size=84pt]
-				\tikzstyle{place}=[circle, draw, color=innerCircleColour, fill=innerCircleColour, minimum size=6pt, inner sep=0pt]
+			\definecolor{innerCircleColour}{RGB}{255, 203, 18}
+			\tikzstyle{vertex}=[circle, draw, color=outerCircleColour, ultra thick, minimum size=84pt]
+			\tikzstyle{place}=[circle, draw, color=innerCircleColour, fill=innerCircleColour, minimum size=6pt, inner sep=0pt]
 
-				\node [vertex] (a) {};
-				\node [vertex, xshift=68pt, yshift=24pt] (b) {};
-				\node [vertex, xshift=112pt, yshift=-20pt] (c) {};
+			\node [vertex] (a) {};
+			\node [vertex, xshift=68pt, yshift=24pt] (b) {};
+			\node [vertex, xshift=112pt, yshift=-20pt] (c) {};
 
-				\node [place, label=above:$A$] (A) {};
-				\node [place, xshift=68pt, yshift=24pt, label=above:$B$] (B) {};
-				\node [place, xshift=112pt, yshift=-20pt, label=right:$C$] (C) {};
+			\node [place, label=above:$A$] (A) {};
+			\node [place, xshift=68pt, yshift=24pt, label=above:$B$] (B) {};
+			\node [place, xshift=112pt, yshift=-20pt, label=right:$C$] (C) {};
 
-				\path[-, thick, color=gray]
-				(A) edge (B)
-				(B) edge (C)
-				(A) edge[dashed] (C);
-			\end{tikzpicture}
-		\end{center}
-%		\end{column}
-%		\begin{column}[c]{.5\textwidth}
-%			Damit Informationen von einem Ende des Netzes ($A$) zum anderen gelangen können ($C$), muss die dazwischen liegende Knotenpunkte ($B$) den ungehinderten Transfer von Daten erlauben!\\
-%			Das machen die Router im Freifunk.
-%		\end{column}
-%	\end{columns}
+			\path[-, thick, color=gray]
+			(A) edge (B)
+			(B) edge (C)
+			(A) edge[dashed] (C);
+		\end{tikzpicture}
+	\end{center}
 \end{frame}
 
 %18
 \begin{frame}{Das Netz wächst}
-	\begin{tikzpicture}
-		\definecolor{outerCircleColour}{RGB}{220, 0, 103}
-		\definecolor{innerCircleColour}{RGB}{255, 203, 18}
-		\tikzstyle{vertex}=[circle, draw, color=outerCircleColour, ultra thick, minimum size=40pt]
-		\tikzstyle{place}=[circle, draw, color=innerCircleColour, fill=innerCircleColour, minimum size=7pt, inner sep=0pt]
+	\begin{center}
+		\begin{tikzpicture}
+			\definecolor{outerCircleColour}{RGB}{220, 0, 103}
+			\definecolor{innerCircleColour}{RGB}{255, 203, 18}
+			\tikzstyle{vertex}=[circle, draw, color=outerCircleColour, ultra thick, minimum size=40pt]
+			\tikzstyle{place}=[circle, draw, color=innerCircleColour, fill=innerCircleColour, minimum size=7pt, inner sep=0pt]
 
-		\node [vertex] (a) {};
-		\node [vertex, xshift=15pt, yshift=30pt] (b) {};
-		\node [vertex, xshift=65pt, yshift=5pt] (c) {};
-		\node [vertex, xshift=33pt, yshift=-3pt] (d) {};
-		\node [vertex, xshift=85pt, yshift=-25pt] (e) {};
-		\node [vertex, xshift=100pt, yshift=2pt] (f) {};
-		\node [vertex, xshift=91pt, yshift=32pt] (g) {};
-		\node [vertex, xshift=110pt, yshift=-52pt] (h) {};
-		\node [vertex, xshift=124pt, yshift=23pt] (i) {};
-		\node [vertex, xshift=134pt, yshift=-7pt] (j) {};
-		\node [vertex, xshift=164pt, yshift=-14pt] (k) {};
-		\node [vertex, xshift=144pt, yshift=-66pt] (l) {};
-		\node [vertex, xshift=170pt, yshift=-46pt] (m) {};
-		\node [vertex, xshift=201pt, yshift=-59pt] (n) {};
+			\node [vertex] (a) {};
+			\node [vertex, xshift=15pt, yshift=30pt] (b) {};
+			\node [vertex, xshift=65pt, yshift=5pt] (c) {};
+			\node [vertex, xshift=33pt, yshift=-3pt] (d) {};
+			\node [vertex, xshift=85pt, yshift=-25pt] (e) {};
+			\node [vertex, xshift=100pt, yshift=2pt] (f) {};
+			\node [vertex, xshift=91pt, yshift=32pt] (g) {};
+			\node [vertex, xshift=110pt, yshift=-52pt] (h) {};
+			\node [vertex, xshift=124pt, yshift=23pt] (i) {};
+			\node [vertex, xshift=134pt, yshift=-7pt] (j) {};
+			\node [vertex, xshift=164pt, yshift=-14pt] (k) {};
+			\node [vertex, xshift=144pt, yshift=-66pt] (l) {};
+			\node [vertex, xshift=170pt, yshift=-46pt] (m) {};
+			\node [vertex, xshift=201pt, yshift=-59pt] (n) {};
 
-		\node [place] (A) {};
-		\node [place, xshift=15pt, yshift=30pt] (B) {};
-		\node [place, xshift=65pt, yshift=5pt] (C) {};
-		\node [place, xshift=33pt, yshift=-3pt] (D) {};
-		\node [place, xshift=85pt, yshift=-25pt] (E) {};
-		\node [place, xshift=100pt, yshift=2pt] (F) {};
-		\node [place, xshift=91pt, yshift=32pt] (G) {};
-		\node [place, xshift=110pt, yshift=-52pt] (H) {};
-		\node [place, xshift=124pt, yshift=23pt] (I) {};
-		\node [place, xshift=134pt, yshift=-7pt] (J) {};
-		\node [place, xshift=164pt, yshift=-14pt] (K) {};
-		\node [place, xshift=144pt, yshift=-66pt] (L) {};
-		\node [place, xshift=170pt, yshift=-46pt] (M) {};
-		\node [place, xshift=201pt, yshift=-59pt] (N) {};
+			\node [place] (A) {};
+			\node [place, xshift=15pt, yshift=30pt] (B) {};
+			\node [place, xshift=65pt, yshift=5pt] (C) {};
+			\node [place, xshift=33pt, yshift=-3pt] (D) {};
+			\node [place, xshift=85pt, yshift=-25pt] (E) {};
+			\node [place, xshift=100pt, yshift=2pt] (F) {};
+			\node [place, xshift=91pt, yshift=32pt] (G) {};
+			\node [place, xshift=110pt, yshift=-52pt] (H) {};
+			\node [place, xshift=124pt, yshift=23pt] (I) {};
+			\node [place, xshift=134pt, yshift=-7pt] (J) {};
+			\node [place, xshift=164pt, yshift=-14pt] (K) {};
+			\node [place, xshift=144pt, yshift=-66pt] (L) {};
+			\node [place, xshift=170pt, yshift=-46pt] (M) {};
+			\node [place, xshift=201pt, yshift=-59pt] (N) {};
 
-		\path[-, thick, color=gray]
-		(A) edge (B)
-		(A) edge (D)
-		(B) edge (D)
-		(C) edge (D)
-		(C) edge (E)
-		(C) edge (F)
-		(C) edge (G)
-		(E) edge (F)
-		(E) edge (H)
-		(F) edge (G)
-		(F) edge (I)
-		(F) edge (J)
-		(G) edge (I)
-		(H) edge (L)
-		(I) edge (J)
-		(J) edge (K)
-		(K) edge (M)
-		(L) edge (M)
-		(M) edge (N);
-	\end{tikzpicture}
+			\path[-, thick, color=gray]
+			(A) edge (B)
+			(A) edge (D)
+			(B) edge (D)
+			(C) edge (D)
+			(C) edge (E)
+			(C) edge (F)
+			(C) edge (G)
+			(E) edge (F)
+			(E) edge (H)
+			(F) edge (G)
+			(F) edge (I)
+			(F) edge (J)
+			(G) edge (I)
+			(H) edge (L)
+			(I) edge (J)
+			(J) edge (K)
+			(K) edge (M)
+			(L) edge (M)
+			(M) edge (N);
+		\end{tikzpicture}
+	\end{center}
 \end{frame}
 
 %19
@@ -391,9 +375,9 @@
 
 %TODO hier Beispiel von Wilhelmsburg rein
 \begin{frame}{Ein Beispiel in Wilhelmsburg}
-	\begin{itemize}
-		\item IMAGE
-	\end{itemize}
+	\begin{center}
+		\includegraphics[width=0.9\textwidth]{wilhelmsburg}
+	\end{center}
 \end{frame}
 
 %===================|
@@ -404,7 +388,7 @@
 \begin{frame}{Praktische Umsetzung}
 	\begin{itemize}
 		\item Sehr häufig verwendet: TL-WR741nd (ca. \EUR{15})
-		\item Austausch der vorhandenen Software durch Linux Firmware, die man von unserer Webseite herunterladen kann
+		\item Austausch der vorhandenen Software durch Linux-Firmware, die man von unserer Webseite herunterladen kann
 		\item Antennen abschraub- und austauschbar
 		\item Fertig konfigurierte Router
 		\item Vorgefertigte Firmware auch für weitere Router
@@ -415,14 +399,14 @@
 \begin{frame}{Die Idee}
 	\begin{itemize}
 		\item Es entsteht ein eigenes stadtweites Intranet mit lokalen Zugängen ins Internet
-		\item Kultureinrichtungen können ein eigenes Programm (Communityradio, Streaming-Media) im Intranet anbieten
+		\item Kultureinrichtungen können ein eigenes Programm (Community-Radio, Streaming-Media) im Intranet anbieten
 		\item Jeder Mensch kann Teil dieses Netzes sein ohne monatliche Kosten
 		\item Ermöglichen von Teilhabe am Digitalzeitalter
 	\end{itemize}
 \end{frame}
 
 %27
-\begin{frame}{Gentlemen Agreement}
+\begin{frame}{Gentlemen's Agreement}
 	\begin{itemize}
 		\item Sei Fair!
 		\item Achte auf deine Sicherheit!
@@ -431,20 +415,42 @@
 \end{frame}
 
 \begin{frame}{Sicherheit}
-	\begin{itemize}
-		\item \textbf{HTTPS / SSL}
-	\end{itemize}
+	\begin{columns}[c]
+		\begin{column}{0.5\textwidth}
+			\begin{itemize}
+				\item \textbf{HTTPS / SSL}
+			\end{itemize}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\begin{center}
+				\includegraphics[width=0.5\textwidth]{httpseverywhere}\\
+				HTTPS Everywhere Browserplugin
+			\end{center}
+		\end{column}
+	\end{columns}
 \end{frame}
 
 %23
 \begin{frame}{Freifunk aktuell}
 	\begin{itemize}
 		\item Niedrige Einstiegshürde
+		\item Das Hamburger Freifunkprojekt besteht bereits aus >50 Knoten und wächst stetig weiter
 		\item Freifunk-Communities in vielen Städten
-		\item Das hamburger Freifunkprojekt besteht bereits aus XX Knoten und wächst stetig weiter
 		\item Auch in vielen ländlichen Regionen sind bereits Freifunknetze entstanden
 		\item Gastronomiebetrieben bietet Freifunk die Möglichkeit ein freies WLAN zu stellen
 	\end{itemize}
+\end{frame}
+
+\begin{frame}{Knotengraph}
+	\begin{center}
+		\includegraphics[width=0.64\textwidth]{knotengraph}
+	\end{center}
+\end{frame}
+
+\begin{frame}{Knotenkarte}
+	\begin{center}
+		\includegraphics[width=0.9\textwidth]{knotenkarte}
+	\end{center}
 \end{frame}
 
 \begin{frame}{Coole Projekte}
@@ -464,7 +470,7 @@
 		\item Ein eigenes, unabhängiges Netzwerk aufbauen, um damit zum Beispiel:
 		\begin{itemize}
 			\item Kostenlos untereinander Daten auszutauschen und zu telefonieren (Voice-over-IP)
-			\item Community Radio und Videobroadcasting (Web-TV)
+			\item Community-Radio und Videobroadcasting (Web-TV)
 		\end{itemize}
 	\end{itemize}
 \end{frame}
@@ -472,6 +478,7 @@
 \begin{frame}{Medienstandort Hamburg}
 	\begin{itemize}
 		\item Freifunk macht Hamburg für Kreative attraktiver
+		\item Mehrwert für Tourismus
 	\end{itemize}
 \end{frame}
 
@@ -483,10 +490,28 @@
 			\item Platz für Router bereitstellen
 		\end{itemize}
 		\item Hardware spenden
-		\item Finanziell Unterstützen
-		\item Sprich über uns
-		\item Verbreite die Idee
+		\item Finanziell unterstützen
+		\item Sprich über uns!
+		\item Verbreite die Idee!
 	\end{itemize}
+\end{frame}
+
+\begin{frame}{Vielen Dank!}
+	\begin{columns}
+		\begin{column}{0.6\textwidth}
+			Kontakt und weitere Informationen
+			\vskip 1em
+			\begin{itemize}
+				\item Web: hamburg.freifunk.net
+				\item Mail: kontakt@hamburg.freifunk.net
+		\end{itemize}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\begin{center}
+				\includegraphics[width=0.5\textwidth]{cc-by}
+			\end{center}
+		\end{column}
+	\end{columns}
 \end{frame}
 
 \end{document}
